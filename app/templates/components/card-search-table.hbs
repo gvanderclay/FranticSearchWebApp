@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        Card
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |card|}}
+      <tr>
+        {{card.name}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
