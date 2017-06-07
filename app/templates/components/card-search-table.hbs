@@ -9,7 +9,13 @@
   <tbody>
     {{#each items as |card|}}
       <tr>
-        {{card.name}}
+        <td>
+          <img class="cardImage"src={{card.imageUrl}} height="185" width="132">
+          <br/>
+          <div class="cardData">
+            {{card.name}}
+          </div>
+        </td>
       </tr>
     {{/each}}
   </tbody>

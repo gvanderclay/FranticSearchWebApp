@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Deck</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items as |deck|}}
+    <tr>
+      <td>
+        {{deck.name}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

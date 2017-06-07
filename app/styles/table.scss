@@ -1,7 +1,17 @@
 table {
   tbody {
     tr {
-      margin: 100px;
+      padding: 100px;
+      td {
+        .cardImage {
+          float: left;
+          margin-right: 50px;
+        }
+
+        .cardData {
+          position: relative;
+        }
+      }
     }
   }
 }

@@ -23,6 +23,14 @@ module.exports = function(environment) {
     },
     browserify: {
       ignores: ['cls-bluebird']
+    },
+    firebase: {
+      apiKey: "AIzaSyAh9vLjNzM6zNJczsI3z8C2Jtx8Qv5N5Jc",
+      authDomain: "franticsearch-228c1.firebaseapp.com",
+      databaseURL: "https://franticsearch-228c1.firebaseio.com",
+      projectId: "franticsearch-228c1",
+      storageBucket: "franticsearch-228c1.appspot.com",
+      messagingSenderId: "606635698993"
     }
   };
 

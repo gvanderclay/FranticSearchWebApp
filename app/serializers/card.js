@@ -3,10 +3,6 @@ import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
 
-  keyForAttribute(key) {
-    return Ember.String.decamelize(key);
-  },
-
   normalizeQueryResponse(store, typeClass, payload) {
     const result = this._super(...arguments);
 
