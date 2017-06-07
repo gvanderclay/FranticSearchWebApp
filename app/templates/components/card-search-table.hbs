@@ -7,10 +7,16 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |card|}}
+    {{#each items as |card|}}
       <tr>
         {{card.name}}
       </tr>
     {{/each}}
   </tbody>
 </table>
+<nav>
+  <ul class="pagination">
+    <li class="page-item"><button class="btn page-link" {{action "decrement"}}>Previous</button></li>
+    <li class="page-item"><button class="btn page-link" {{action "increment"}}>Next</button></li>
+  </ul>
+</nav>
