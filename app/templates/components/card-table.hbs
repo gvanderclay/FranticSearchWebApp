@@ -1,0 +1,37 @@
+<table class="table table-bordered table-striped card-table">
+  <thead>
+    <tr>
+      <th>
+        Cards
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each cards as |card|}}
+      <tr>
+        <td>
+          <img class="cardImage"src={{card.imageUrl}} height="185" width="132">
+          <br/>
+          <div class="cardData">
+            {{card.name}}
+          </div>
+          <div class="cardActions">
+            {{#if canAdd}}
+              {{#bs-dropdown as |dd|}}
+                {{#dd.button}}Add to deck <span class="caret"></span>{{/dd.button}}
+                {{#dd.menu as |ddm|}}
+                  {{#each decks as |deck|}}
+                    {{#ddm.item}}<button class="btn btn-link" {{action "addToDeck" card deck}}>{{deck.deckName}}</button>{{/ddm.item}}
+                  {{/each}}
+                {{/dd.menu}}
+              {{/bs-dropdown}}
+            {{/if}}
+            {{#if deck}}
+              <button class="btn btn-danger" {{action 'deleteFromDeck' card deck}}>Delete</button>
+            {{/if}}
+          </div>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

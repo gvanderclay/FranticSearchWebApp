@@ -1,5 +1,5 @@
 <div>
-  <button style="float:right" class="btn btn-primary">Add Deck</button>
+<button style="float:right" class="btn btn-primary" {{action "createNewDeck"}}>Add Deck</button>
   <h1>Decks</h1>
 </div>
-{{deck-table}}
+{{deck-table items=model delete="deleteDeck"}}

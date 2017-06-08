@@ -1,16 +1,23 @@
 table {
-  tbody {
+  &.card-table {
     tr {
       padding: 100px;
-      td {
-        .cardImage {
-          float: left;
-          margin-right: 50px;
-        }
+    }
+    td {
+      position: relative;
+      .cardImage {
+        float: left;
+        margin-right: 50px;
+      }
 
-        .cardData {
-          position: relative;
-        }
+      .cardData {
+        position: relative;
+      }
+
+      .cardActions {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
       }
     }
   }

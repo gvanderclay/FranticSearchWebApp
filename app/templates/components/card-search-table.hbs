@@ -1,25 +1,4 @@
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>
-        Card
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each items as |card|}}
-      <tr>
-        <td>
-          <img class="cardImage"src={{card.imageUrl}} height="185" width="132">
-          <br/>
-          <div class="cardData">
-            {{card.name}}
-          </div>
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{card-table cards=cards decks=decks canAdd=true canDelete=false}}
 <nav>
   <ul class="pagination">
     <li class="page-item"><button class="btn page-link" {{action "decrement"}}>Previous</button></li>

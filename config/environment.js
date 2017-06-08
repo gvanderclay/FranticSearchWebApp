@@ -31,6 +31,9 @@ module.exports = function(environment) {
       projectId: "franticsearch-228c1",
       storageBucket: "franticsearch-228c1.appspot.com",
       messagingSenderId: "606635698993"
+    },
+    torii: {
+      sessionServiceName: 'session'
     }
   };
 

@@ -7,6 +7,7 @@ export default DS.RESTAdapter.extend({
     if(headers && headers['total-count']) {
       payload['pageCount'] = Math.ceil(headers['total-count'] / 100);
     }
+
     return this._super(status, headers, payload, requestData);
   }
 });

@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
@@ -10,6 +9,7 @@ export default DS.RESTSerializer.extend({
 
     if(payload['pageCount']) {
       result.meta.pageCount = payload['pageCount'];
+      console.log('here');
     }
 
     return result;

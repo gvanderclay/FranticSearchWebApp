@@ -8,6 +8,10 @@ export default Ember.Component.extend({
 
     decrement() {
       this.sendAction('decrement');
+    },
+
+    addTo(card, deck) {
+      this.sendAction('addTo', card, deck);
     }
   }
 });

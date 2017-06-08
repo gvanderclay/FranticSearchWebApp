@@ -1,0 +1,9 @@
+<h1>Log in</h1>
+<br>
+<form {{action 'signIn' 'password' email password on='submit'}}>
+  {{ input value=email class="form-control" type="text" name="user" placeholder="Username" }}
+  <br>
+  {{ input value=password class="form-control" type="password" name="pass" placeholder="Password" }}
+  <br>
+  <input class="form-control btn btn-primary" type="submit" name="login" value="Login">
+</form>

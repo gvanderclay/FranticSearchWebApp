@@ -8,7 +8,13 @@
     {{#each items as |deck|}}
     <tr>
       <td>
-        {{deck.name}}
+        {{deck.deckName}}
+        <div style="float:right">
+          {{#link-to 'deck.edit' deck.id}}
+            <button class="btn btn-info">Edit</button>
+          {{/link-to}}
+          <button class="btn btn-danger" {{action "delete" deck}}>Delete</button>
+        </div>
       </td>
     </tr>
     {{/each}}

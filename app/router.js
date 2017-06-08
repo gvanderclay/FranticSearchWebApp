@@ -9,6 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('card-search');
   this.route('decks');
+
+  this.route('deck', function() {
+    this.route('edit', {path: '/:deck_id'});
+  });
 });
 
 export default Router;

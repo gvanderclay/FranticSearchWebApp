@@ -1,7 +1,7 @@
 <div class="row row-offcanvas row-offcanvas-right">
   <div class="col-12 col-md-7">
     <h1>Card Search</h1>
-    {{card-search-table items=model increment="incrementPage" decrement="decrementPage"}}
+    {{card-search-table cards=model.cards decks=model.decks increment="incrementPage" decrement="decrementPage"}}
   </div>
   <div class="col-6 col-md-5 sidebar-offcanvas" id="sidebar">
     {{card-search-form cardName=cardName update="updateCardName"}}

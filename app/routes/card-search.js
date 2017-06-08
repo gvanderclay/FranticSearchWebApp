@@ -12,7 +12,7 @@ export default Ember.Route.extend({
 
   actions: {
     incrementPage() {
-      if(this.currentModel.meta.pageCount > this.controller.get('page')){
+      if(this.currentModel.cards.meta.pageCount > this.controller.get('page')){
         this.controller.incrementProperty('page');
       }
     },
@@ -24,7 +24,10 @@ export default Ember.Route.extend({
   },
 
   model: function(params) {
-    return this.store.query('card', {page: params.page, name: params.cardName});
+    return Ember.RSVP.hash({
+      cards: this.store.query('card', {page: params.page, name: params.cardName, orderBy: 'name'}),
+      decks: this.store.findAll('deck')
+    });
   }
 
 });
