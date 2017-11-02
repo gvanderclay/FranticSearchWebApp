@@ -1,2 +1,7 @@
-<h1>{{model.deckName}}</h1>
+{{#ember-inline-edit value=model.deckName onSave="updateDeckName" as |inline-edit|}}
+  {{#inline-edit.editable}}
+    <h1>{{model.deckName}}</h1>
+  {{/inline-edit.editable}}
+  {{inline-edit.editor value=model.deckName }}
+{{/ember-inline-edit}}
 {{card-table cards=model.cards deck=model}}

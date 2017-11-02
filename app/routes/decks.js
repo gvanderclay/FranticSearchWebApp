@@ -8,8 +8,7 @@ export default Ember.Route.extend({
   actions: {
     createNewDeck() {
       const newDeck = this.store.createRecord('deck', {
-        deckName: "New Deck",
-        cards: []
+        deckName: "New Deck"
       });
       newDeck.save();
     },
